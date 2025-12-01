@@ -1,0 +1,6 @@
+(library
+  (name aoc2025_test)
+  (preprocess
+    (pps ppx_let ppx_jane))
+  (inline_tests)
+  (libraries aoc2025 core ppx_jane))

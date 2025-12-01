@@ -1,0 +1,5 @@
+(library
+  (name aoc2025)
+  (preprocess
+    (pps ppx_let ppx_jane))
+  (libraries core re2))
