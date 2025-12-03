@@ -40,7 +40,7 @@ module M = struct
         let s = Int.to_string x in
         is_invalid s))
     |> List.concat
-    |> List.fold ~f:( + ) ~init:0
+    |> List.fold ~init:0 ~f:( + )
     |> printf "%d\n"
   ;;
 
@@ -54,7 +54,7 @@ module M = struct
         |> List.map ~f:(fun repeat -> is_invalid s ~repeat)
         |> List.fold ~f:( || ) ~init:false))
     |> List.concat
-    |> List.fold ~f:( + ) ~init:0
+    |> List.fold ~init:0 ~f:( + )
     |> printf "%d\n"
   ;;
 end

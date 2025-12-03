@@ -1,6 +1,6 @@
 (executables
- (public_names day01 day02)
- (names day01 day02)
+ (public_names day01 day02 day03)
+ (names day01 day02 day03)
  (preprocess
    (pps ppx_let ppx_jane))
  (libraries aoc2025 core))
