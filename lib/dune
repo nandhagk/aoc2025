@@ -1,5 +1,5 @@
 (library
   (name aoc2025)
   (preprocess
-    (pps ppx_let ppx_jane))
+    (pps ppx_let ppx_jane ppx_sexp_conv))
   (libraries core re2))

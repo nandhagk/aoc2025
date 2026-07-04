@@ -33,24 +33,22 @@ module Bank = struct
   ;;
 end
 
-module M = struct
-  type t = Bank.t list
+type t = Bank.t list
 
-  let parse input =
-    input |> String.strip |> String.split_lines |> List.map ~f:Bank.of_string
-  ;;
+let parse input =
+  input |> String.strip |> String.split_lines |> List.map ~f:Bank.of_string
+;;
 
-  let part1 banks =
-    banks
-    |> List.map ~f:(Bank.max_joltage ~k:2)
-    |> List.fold ~init:0 ~f:( + )
-    |> printf "%d\n"
-  ;;
+let part1 banks =
+  banks
+  |> List.map ~f:(Bank.max_joltage ~k:2)
+  |> List.fold ~init:0 ~f:( + )
+  |> fun ans -> print_s [%sexp (ans : int)]
+;;
 
-  let part2 banks =
-    banks
-    |> List.map ~f:(Bank.max_joltage ~k:12)
-    |> List.fold ~init:0 ~f:( + )
-    |> printf "%d\n"
-  ;;
-end
+let part2 banks =
+  banks
+  |> List.map ~f:(Bank.max_joltage ~k:12)
+  |> List.fold ~init:0 ~f:( + )
+  |> fun ans -> print_s [%sexp (ans : int)]
+;;

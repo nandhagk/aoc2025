@@ -1,6 +1,6 @@
 (executables
- (public_names day01 day02 day03)
- (names day01 day02 day03)
+ (public_names main)
+ (names main)
  (preprocess
-   (pps ppx_let ppx_jane))
- (libraries aoc2025 core))
+   (pps ppx_let ppx_jane ppx_sexp_conv ppx_string_conv))
+ (libraries aoc2025 core core_unix.command_unix))

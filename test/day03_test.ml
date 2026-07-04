@@ -1,6 +1,6 @@
 open Core
 open Aoc2025
-open Runner.Make (Day03.M)
+open Runner.Make (Day03)
 
 let input =
   {|
