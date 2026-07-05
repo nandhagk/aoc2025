@@ -6,6 +6,7 @@ module Day = struct
     | Day02
     | Day03
     | Day04
+    | Day05
   [@@deriving string ~capitalize:"snake_case", sexp, enumerate]
 
   let arg_type = Command.Arg_type.create of_string
@@ -15,6 +16,7 @@ module Day = struct
     | Day02 -> (module Aoc2025.Day02)
     | Day03 -> (module Aoc2025.Day03)
     | Day04 -> (module Aoc2025.Day04)
+    | Day05 -> (module Aoc2025.Day05)
   ;;
 end
 
